@@ -1,0 +1,2 @@
+model_checkpoint_path: "/Users/lakshbhambhani/Downloads/LungCancerDetection-master/src/models/nodule3-classifier.tfl"
+all_model_checkpoint_paths: "/Users/lakshbhambhani/Downloads/LungCancerDetection-master/src/models/nodule3-classifier.tfl"
