@@ -24,7 +24,7 @@ kernel_h[int((kernel_size - 1)/2), :] = np.ones(kernel_size)
 kernel_v /= kernel_size 
 kernel_h /= kernel_size 
 
-for origImg in glob.glob('../LungCancerDetection/data/test/*'):
+for origImg in glob.glob('../data/sharp/*'):
 
     img = cv2.imread(origImg) 
     
@@ -38,5 +38,5 @@ for origImg in glob.glob('../LungCancerDetection/data/test/*'):
     
     # Save the outputs. 
     # cv2.imwrite('car_vertical.jpg', vertical_mb) 
-    cv2.imwrite('../data/blurred_scans/test/' + filename, horizonal_mb) 
+    cv2.imwrite('../data/blurred/' + filename, horizonal_mb) 
 
