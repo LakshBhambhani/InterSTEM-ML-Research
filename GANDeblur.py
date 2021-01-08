@@ -90,9 +90,9 @@ discriminator.save_weights('discriminator.h5')
 
 generator.save_weights('generator.h5')
 
-# gan = simple_gan(generator, discriminator, normal_latent_sampling((100,)))
-# model = AdversarialModel(base_model=gan,player_params=[generator.trainable_weights, discriminator.trainable_weights])
-# model.adversarial_compile(adversarial_optimizer=AdversarialOptimizerSimultaneous(), player_optimizers=['adam', 'adam'], loss='binary_crossentropy')
+gan = simple_gan(generator, discriminator, normal_latent_sampling((100,)))
+model = AdversarialModel(base_model=gan,player_params=[generator.trainable_weights, discriminator.trainable_weights])
+model.adversarial_compile(adversarial_optimizer=AdversarialOptimizerSimultaneous(), player_optimizers=['adam', 'adam'], loss='binary_crossentropy')
 
 # history = model.fit(x=train_x, y=gan_targets(train_x.shape[0]), epochs=10, batch_size=batch_size)
 
